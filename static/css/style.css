@@ -8,7 +8,7 @@
     --white: #fff;
     --offwhite: #fafafa;
     --title: 'Mulish', sans-serif;
-    --summary: 'Frank Ruhl Libre', serif;
+    --summary: 'Mulish', sans-serif;
     --headings: 'Encode Sans Semi Condensed', sans-serif;
     --h5: 0.83rem;
     --h6: 0.67rem;
@@ -145,17 +145,21 @@ code {
   background: var(--white) !important;
   color: var(--dark);
   font-family: var(--title);
+  font-size: 1.25rem;
+
 }
+
 .navbar-nav .nav-item .nav-link {
     color: var(--grey);
     font-weight: 300;
     transition: color 1s;
     display: block;
     position: relative;
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
     padding: 0.2em 0;
 }
+
 /* Fade in */
 .nav-link::after {
   content: '';
@@ -168,6 +172,7 @@ code {
   opacity: 0;
   transition: opacity 300ms, transform 300ms;
 }
+
 .nav-link:hover::after,
 .nav-link:focus::after {
   opacity: 1;
@@ -175,8 +180,31 @@ code {
 }
 
 .navbar-brand {
-  margin-left: 0.5em;
+  margin-left: 0.25em;
   font-size: 2.0rem;
+}
+
+.navbar-toggler:focus {
+    /*Below line will remove the border from the icon
+    I have used bootstrap icon here */
+    /* This will only remove the shadow effect */
+    /* Border is still there */
+    /* if you don't want any border then set the property equals to zero */
+    border: 0 !important;
+    box-shadow: none !important;
+  
+    /* This will remove the rounded corner(radious-border)
+    and give square border */
+    /* border-radius: 0 !important; */    
+}
+
+.navbar-toggler {
+    /* This will completely remove border from the icon */
+    /* If you need border for the icon then comment this code */
+     border: 0 !important;
+
+    /* if you want to check the border please uncomment below code */
+    /* border-color: yellow !important; */
 }
 
 /********************* Home *********************/
@@ -184,13 +212,15 @@ code {
 .name {
   font-family: var(--title);
   font-weight: 800;
+  font-size: 3.0rem;
 }
 
 .bio {
-  max-width: 750px;
-  font-weight: 200;
+  max-width: 1000px;
+  font-weight: 600;
   font-family: var(--summary);
 }
+
 .heading {
     font-weight: 400;
     color: var(--grey);
